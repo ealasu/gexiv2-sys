@@ -101,6 +101,7 @@ extern {
     pub fn gexiv2_metadata_get_comment(this: *mut GExiv2Metadata) -> *const c_char;
     pub fn gexiv2_metadata_set_comment(this: *mut GExiv2Metadata, comment: *const c_char);
     pub fn gexiv2_metadata_clear_comment(this: *mut GExiv2Metadata);
+    pub fn gexiv2_metadata_get_exif_thumbnail(this: *mut GExiv2Metadata, buffer: *mut *mut u8, size: *mut c_int) -> bool;
 
     // GPS-related functions.
     pub fn gexiv2_metadata_get_gps_longitude(this: *mut GExiv2Metadata, longitude: *mut c_double) -> bool;
